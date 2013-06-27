@@ -7,7 +7,11 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+Params tracker: <%= params.inspect %><br />
+@product tracker: <%= @product.inspect %><br />
+Notices: <% if flash[:notice].present? %><br />
+<p class="flash-notice"><%= flash[:notice] %></p>
+<%end%><br />
 <%= link_to "a list of users", users_path %>  |  
 <%= link_to "a list of products", products_path %>
 
